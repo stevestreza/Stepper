@@ -200,9 +200,9 @@
 		if (!data.$input.is(':disabled') && !data.$stepper.hasClass("disabled")) {
 			var change = $(e.target).hasClass("up") ? data.step : -data.step;
 
-			data.timer = _startTimer(data.timer, 125, function() {
-				_step(data, change, false);
-			});
+			// data.timer = _startTimer(data.timer, 125, function() {
+			// 	_step(data, change, false);
+			// });
 			_step(data, change);
 
 			$("body").on("touchend.stepper mouseup.stepper", data, _onMouseUp);
